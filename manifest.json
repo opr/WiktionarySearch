@@ -1,6 +1,6 @@
 {
   "name": "Wiktionary Search",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "manifest_version": 2,
   "description": "This extension allows you to perform a quick search on the wiktionary.",
   "homepage_url": "http://thomas-roberts.co.uk",

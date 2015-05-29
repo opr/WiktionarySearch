@@ -12,3 +12,24 @@ chrome.extension.onMessage.addListener(
     sendResponse();
   });
   
+ chrome.contextMenus.create({
+    "title": "Search on Wiktionary",
+    "contexts": ["selection"],
+    "onclick" : function(e) {
+  
+	var bkg = chrome.extension.getBackgroundPage();
+	bkg.console.log('foo');
+	
+    var url = e.pageUrl;
+    var wikURL = "http://en.wiktionary.org/wiki/";
+
+    if (e.selectionText) {
+        // The user selected some text, put this in the message.
+        wikURL += encodeURI(e.selectionText);
+    }
+    // Open the page up.
+    chrome.tabs.create(
+          {"url" : wikURL });
+}
+  });
+  
