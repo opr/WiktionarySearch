@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+h3#desc {
+	text-align: center;
+}
+div#main {
+	display: table;
+	margin: 0 auto;
+}
+label {
+	display: inline-block
+}
+div#choose {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+}
+div#url {
+	padding 0;
+	font-style: italic;
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	margin-left: 40px;
+}
+img {
+	position: fixed;
+	bottom: 10px;
+	left: 20px;
+
+}
+div#status {
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+}
+input[type=radio] {
+	display: none;
+}
+input[type=radio]:checked + label::before {
+		content: ">";
+}
+input[type=radio]:checked + label {
+		font-weight: bold;
+}
+</style>
+<h3 id="desc"></h3>
+<div id="main">
+<br>
+<div id="choose">
+<input type="radio" name="language" id="en" value="en"><label for="en"> English</label>
+<br>
+<input type="radio" name="language" id="sv" value="sv"><label for="sv"> Svenska</label>
+</div>
+<div id="url"></div>
+</div>
+<br><br>
+
+<div id="status"></div>
+<script src="options.js"></script>
+</body>
+</html>
