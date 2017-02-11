@@ -11,8 +11,6 @@ chrome.storage.sync.get("language", function(obj) {
 });
 chrome.storage.onChanged.addListener(function(changes, namespace) {
     chrome.storage.sync.get("language", function(obj) {
-
-        // Update status bar text here
         lang = obj.language;
     });
 });
@@ -28,18 +26,14 @@ chrome.contextMenus.create({
     "contexts": ["selection"],
     "onclick": function(e) {
 
-
-
         var bkg = chrome.extension.getBackgroundPage();
 
         var url = e.pageUrl;
         var wikURL = "http://" + lang + ".wiktionary.org/wiki/";
 
         if (e.selectionText) {
-            // The user selected some text, put this in the message.
             wikURL += encodeURI(e.selectionText);
         }
-        // Open the page up.
         chrome.tabs.create({
             "url": wikURL
         });

@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html>
 <body>
+<!--<h1 id="title" style="display:inline-block; margin-right:10px"></h1>-->
 
 <style>
-h3#desc {
+#header{
+	background: rgba(255, 255, 255, 0.9);
+    height:50px;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:10
+}
+#desc {
 	text-align: center;
 }
-div#main {
-	display: table;
-	margin: 0 auto;
-}
-label {
-	display: inline-block
-}
-div#choose {
-	display: inline-block;
-	float: left;
-	margin-left: 10px;
-}
-div#url {
-	padding 0;
+#url {
 	font-style: italic;
-	display: inline-block;
-	vertical-align: top;
-	float: left;
-	margin-left: 40px;
-}
-img {
-	position: fixed;
-	bottom: 10px;
-	left: 20px;
+	text-align: center;
+	margin-top: -15px;
 
 }
-div#status {
+#choose {
+	margin-bottom: 50%;
+	margin-left: 25%;
+	margin-top: 50px;
+}
+#status {
 	position: fixed;
 	bottom: 10px;
 	right: 20px;
@@ -41,21 +35,174 @@ input[type=radio] {
 	display: none;
 }
 input[type=radio]:checked + label::before {
-		content: ">";
+		content: "> ";
 }
 input[type=radio]:checked + label {
 		font-weight: bold;
 }
+a:link, a:visited {
+		color: black;
+		text-decoration: none;
+}
+a:hover, a:active {
+		background-color: transparent;
+}
 </style>
+
+<div id="header">
 <h3 id="desc"></h3>
-<div id="main">
-<br>
-<div id="choose">
-<input type="radio" name="language" id="en" value="en"><label for="en"> English</label>
-<br>
-<input type="radio" name="language" id="sv" value="sv"><label for="sv"> Svenska</label>
+<p id="url"><a href=""></a></p>
 </div>
-<div id="url"></div>
+<br>
+
+<div id="choose">
+<input type="radio" name="language" id="af" value="af"><label for="af">Afrikaans</label><br>
+<input type="radio" name="language" id="an" value="an"><label for="an">Aragonés</label><br>
+<input type="radio" name="language" id="roa-rup" value="roa-rup"><label for="roa-rup">Armãneashce</label><br>
+<input type="radio" name="language" id="ast" value="ast"><label for="ast">Asturianu</label><br>
+<input type="radio" name="language" id="gn" value="gn"><label for="gn">Avañe'ẽ</label><br>
+<input type="radio" name="language" id="ay" value="ay"><label for="ay">Aymar</label><br>
+<input type="radio" name="language" id="az" value="az"><label for="az">Azərbaycanca</label><br>
+<input type="radio" name="language" id="id" value="id"><label for="id">Bahasa Indonesia</label><br>
+<input type="radio" name="language" id="ms" value="ms"><label for="ms">Bahasa Melayu</label><br>
+<input type="radio" name="language" id="jv" value="jv"><label for="jv">Basa Jawa</label><br>
+<input type="radio" name="language" id="su" value="su"><label for="su">Basa Sunda</label><br>
+<input type="radio" name="language" id="mt" value="mt"><label for="mt">bil-Malti</label><br>
+<input type="radio" name="language" id="bs" value="bs"><label for="bs">Bosanski</label><br>
+<input type="radio" name="language" id="br" value="br"><label for="br">Brezhoneg</label><br>
+<input type="radio" name="language" id="zh-min-nan" value="zh-min-nan"><label for="zh-min-nan">Bân-lâm-gú</label><br>
+<input type="radio" name="language" id="ca" value="ca"><label for="ca">Català</label><br>
+<input type="radio" name="language" id="co" value="co"><label for="co">Corsu</label><br>
+<input type="radio" name="language" id="cy" value="cy"><label for="cy">Cymraeg</label><br>
+<input type="radio" name="language" id="da" value="da"><label for="da">Dansk</label><br>
+<input type="radio" name="language" id="de" value="de"><label for="de">Deutsch</label><br>
+<input type="radio" name="language" id="na" value="na"><label for="na">dorerin Naoero</label><br>
+<input type="radio" name="language" id="et" value="et"><label for="et">Eesti</label><br>
+<input type="radio" name="language" id="ang" value="ang"><label for="ang">Englisc</label><br>
+<input type="radio" name="language" id="en" value="en"><label for="en">English</label><br>
+<input type="radio" name="language" id="es" value="es"><label for="es">Español</label><br>
+<input type="radio" name="language" id="eo" value="eo"><label for="eo">Esperanto</label><br>
+<input type="radio" name="language" id="eu" value="eu"><label for="eu">Euskara</label><br>
+<input type="radio" name="language" id="to" value="to"><label for="to">faka Tonga</label><br>
+<input type="radio" name="language" id="fr" value="fr"><label for="fr">Français</label><br>
+<input type="radio" name="language" id="fy" value="fy"><label for="fy">Frysk</label><br>
+<input type="radio" name="language" id="fo" value="fo"><label for="fo">Føroyskt</label><br>
+<input type="radio" name="language" id="ga" value="ga"><label for="ga">Gaeilge</label><br>
+<input type="radio" name="language" id="gv" value="gv"><label for="gv">Gaelg</label><br>
+<input type="radio" name="language" id="sm" value="sm"><label for="sm">Gagana Samoa</label><br>
+<input type="radio" name="language" id="gl" value="gl"><label for="gl">Galego</label><br>
+<input type="radio" name="language" id="gd" value="gd"><label for="gd">Gàidhlig</label><br>
+<input type="radio" name="language" id="hr" value="hr"><label for="hr">Hrvatski</label><br>
+<input type="radio" name="language" id="io" value="io"><label for="io">Ido</label><br>
+<input type="radio" name="language" id="ia" value="ia"><label for="ia">Interlingua</label><br>
+<input type="radio" name="language" id="ie" value="ie"><label for="ie">Interlingue</label><br>
+<input type="radio" name="language" id="zu" value="zu"><label for="zu">isiZulu</label><br>
+<input type="radio" name="language" id="it" value="it"><label for="it">Italiano</label><br>
+<input type="radio" name="language" id="kl" value="kl"><label for="kl">Kalaallisut</label><br>
+<input type="radio" name="language" id="csb" value="csb"><label for="csb">Kaszëbsczi</label><br>
+<input type="radio" name="language" id="kw" value="kw"><label for="kw">Kernewek/Karnuack</label><br>
+<input type="radio" name="language" id="rw" value="rw"><label for="rw">Kinyarwanda</label><br>
+<input type="radio" name="language" id="sw" value="sw"><label for="sw">Kiswahili</label><br>
+<input type="radio" name="language" id="ku" value="ku"><label for="ku">Kurdî / كوردی</label><br>
+<input type="radio" name="language" id="ky" value="ky"><label for="ky">Kırgızca</label><br>
+<input type="radio" name="language" id="la" value="la"><label for="la">Latina</label><br>
+<input type="radio" name="language" id="lv" value="lv"><label for="lv">Latviešu</label><br>
+<input type="radio" name="language" id="lt" value="lt"><label for="lt">Lietuvių</label><br>
+<input type="radio" name="language" id="li" value="li"><label for="li">Limburgs</label><br>
+<input type="radio" name="language" id="ln" value="ln"><label for="ln">Lingala</label><br>
+<input type="radio" name="language" id="jbo" value="jbo"><label for="jbo">Lojban</label><br>
+<input type="radio" name="language" id="lb" value="lb"><label for="lb">Lëtzebuergesch</label><br>
+<input type="radio" name="language" id="hu" value="hu"><label for="hu">Magyar</label><br>
+<input type="radio" name="language" id="mg" value="mg"><label for="mg">Malagasy</label><br>
+<input type="radio" name="language" id="mi" value="mi"><label for="mi">Māori</label><br>
+<input type="radio" name="language" id="fj" value="fj"><label for="fj">Na Vosa Vakaviti</label><br>
+<input type="radio" name="language" id="nah" value="nah"><label for="nah">Nahuatl</label><br>
+<input type="radio" name="language" id="nl" value="nl"><label for="nl">Nederlands</label><br>
+<input type="radio" name="language" id="no" value="no"><label for="no">Norsk (Bokmål)</label><br>
+<input type="radio" name="language" id="nn" value="nn"><label for="nn">Nynorsk</label><br>
+<input type="radio" name="language" id="hsb" value="hsb"><label for="hsb">Obersorbisch</label><br>
+<input type="radio" name="language" id="oc" value="oc"><label for="oc">Occitan</label><br>
+<input type="radio" name="language" id="om" value="om"><label for="om">Oromoo</label><br>
+<input type="radio" name="language" id="uz" value="uz"><label for="uz">O‘zbek</label><br>
+<input type="radio" name="language" id="nds" value="nds"><label for="nds">Plattdüütsch</label><br>
+<input type="radio" name="language" id="pl" value="pl"><label for="pl">Polski</label><br>
+<input type="radio" name="language" id="pt" value="pt"><label for="pt">Português</label><br>
+<input type="radio" name="language" id="ro" value="ro"><label for="ro">Română</label><br>
+<input type="radio" name="language" id="qu" value="qu"><label for="qu">Runa Simi</label><br>
+<input type="radio" name="language" id="st" value="st"><label for="st">seSotho</label><br>
+<input type="radio" name="language" id="tn" value="tn"><label for="tn">Setswana</label><br>
+<input type="radio" name="language" id="sq" value="sq"><label for="sq">Shqip</label><br>
+<input type="radio" name="language" id="scn" value="scn"><label for="scn">Sicilianu</label><br>
+<input type="radio" name="language" id="simple" value="simple"><label for="simple">Simple English</label><br>
+<input type="radio" name="language" id="ss" value="ss"><label for="ss">SiSwati</label><br>
+<input type="radio" name="language" id="sk" value="sk"><label for="sk">Slovenčina</label><br>
+<input type="radio" name="language" id="sl" value="sl"><label for="sl">Slovenščina</label><br>
+<input type="radio" name="language" id="so" value="so"><label for="so">Soomaaliga</label><br>
+<input type="radio" name="language" id="sh" value="sh"><label for="sh">Srpskohrvatski / Српскохрватски</label><br>
+<input type="radio" name="language" id="fi" value="fi"><label for="fi">Suomi</label><br>
+<input type="radio" name="language" id="sv" value="sv"><label for="sv">Svenska</label><br>
+<input type="radio" name="language" id="sg" value="sg"><label for="sg">Sängö</label><br>
+<input type="radio" name="language" id="tl" value="tl"><label for="tl">Tagalog</label><br>
+<input type="radio" name="language" id="tt" value="tt"><label for="tt">Tatarça / Татарча</label><br>
+<input type="radio" name="language" id="vi" value="vi"><label for="vi">Tiếng Việt</label><br>
+<input type="radio" name="language" id="tpi" value="tpi"><label for="tpi">Tok Pisin</label><br>
+<input type="radio" name="language" id="tr" value="tr"><label for="tr">Türkçe</label><br>
+<input type="radio" name="language" id="vo" value="vo"><label for="vo">Volapük</label><br>
+<input type="radio" name="language" id="vec" value="vec"><label for="vec">Vèneto</label><br>
+<input type="radio" name="language" id="wa" value="wa"><label for="wa">Walon</label><br>
+<input type="radio" name="language" id="wo" value="wo"><label for="wo">Wollof</label><br>
+<input type="radio" name="language" id="ts" value="ts"><label for="ts">Xitsonga</label><br>
+<input type="radio" name="language" id="is" value="is"><label for="is">Íslenska</label><br>
+<input type="radio" name="language" id="cs" value="cs"><label for="cs">Čeština</label><br>
+<input type="radio" name="language" id="el" value="el"><label for="el">Ελληνικά</label><br>
+<input type="radio" name="language" id="be" value="be"><label for="be">Беларуская</label><br>
+<input type="radio" name="language" id="bg" value="bg"><label for="bg">Български</label><br>
+<input type="radio" name="language" id="mk" value="mk"><label for="mk">Македонски</label><br>
+<input type="radio" name="language" id="mn" value="mn"><label for="mn">Монгол</label><br>
+<input type="radio" name="language" id="ru" value="ru"><label for="ru">Русский</label><br>
+<input type="radio" name="language" id="sr" value="sr"><label for="sr">Српски / Srpski</label><br>
+<input type="radio" name="language" id="tg" value="tg"><label for="tg">Тоҷикӣ</label><br>
+<input type="radio" name="language" id="uk" value="uk"><label for="uk">Українська</label><br>
+<input type="radio" name="language" id="kk" value="kk"><label for="kk">қазақша</label><br>
+<input type="radio" name="language" id="hy" value="hy"><label for="hy">Հայերեն</label><br>
+<input type="radio" name="language" id="yi" value="yi"><label for="yi">ייִדיש</label><br>
+<input type="radio" name="language" id="he" value="he"><label for="he">עברית</label><br>
+<input type="radio" name="language" id="ug" value="ug"><label for="ug">ئۇيغۇر تىلى</label><br>
+<input type="radio" name="language" id="ur" value="ur"><label for="ur">اردو</label><br>
+<input type="radio" name="language" id="ar" value="ar"><label for="ar">العربية</label><br>
+<input type="radio" name="language" id="tk" value="tk"><label for="tk">تركمن / Туркмен</label><br>
+<input type="radio" name="language" id="sd" value="sd"><label for="sd">سنڌي، سندھی ، सिन्ध</label><br>
+<input type="radio" name="language" id="pnb" value="pnb"><label for="pnb">شاہ مکھی پنجابی (Shāhmukhī Pañj)</label><br>
+<input type="radio" name="language" id="fa" value="fa"><label for="fa">فارسی</label><br>
+<input type="radio" name="language" id="ha" value="ha"><label for="ha">هَوُسَ</label><br>
+<input type="radio" name="language" id="ps" value="ps"><label for="ps">پښتو</label><br>
+<input type="radio" name="language" id="dv" value="dv"><label for="dv">ދިވެހިބަސް</label><br>
+<input type="radio" name="language" id="ks" value="ks"><label for="ks">कश्मीरी - (كش)</label><br>
+<input type="radio" name="language" id="ne" value="ne"><label for="ne">नेपाली</label><br>
+<input type="radio" name="language" id="mr" value="mr"><label for="mr">मराठी</label><br>
+<input type="radio" name="language" id="sa" value="sa"><label for="sa">संस्कृतम्</label><br>
+<input type="radio" name="language" id="hi" value="hi"><label for="hi">हिन्दी</label><br>
+<input type="radio" name="language" id="bn" value="bn"><label for="bn">বাংলা</label><br>
+<input type="radio" name="language" id="pa" value="pa"><label for="pa">ਪੰਜਾਬੀ</label><br>
+<input type="radio" name="language" id="gu" value="gu"><label for="gu">ગુજરાતી</label><br>
+<input type="radio" name="language" id="or" value="or"><label for="or">ଓଡ଼ିଆ</label><br>
+<input type="radio" name="language" id="ta" value="ta"><label for="ta">தமிழ்</label><br>
+<input type="radio" name="language" id="te" value="te"><label for="te">తెలుగు</label><br>
+<input type="radio" name="language" id="kn" value="kn"><label for="kn">ಕನ್ನಡ</label><br>
+<input type="radio" name="language" id="ml" value="ml"><label for="ml">മലയാളം</label><br>
+<input type="radio" name="language" id="si" value="si"><label for="si">සිංහල</label><br>
+<input type="radio" name="language" id="th" value="th"><label for="th">ไทย</label><br>
+<input type="radio" name="language" id="lo" value="lo"><label for="lo">ລາວ</label><br>
+<input type="radio" name="language" id="my" value="my"><label for="my">မြန်မာဘာသာ</label><br>
+<input type="radio" name="language" id="ka" value="ka"><label for="ka">ქართული</label><br>
+<input type="radio" name="language" id="ti" value="ti"><label for="ti">ትግርኛ</label><br>
+<input type="radio" name="language" id="am" value="am"><label for="am">አማርኛ</label><br>
+<input type="radio" name="language" id="chr" value="chr"><label for="chr">ᏣᎳᎩ</label><br>
+<input type="radio" name="language" id="iu" value="iu"><label for="iu">ᐃᓄᒃᑎᑐᑦ</label><br>
+<input type="radio" name="language" id="km" value="km"><label for="km">ភាសាខ្មែរ</label><br>
+<input type="radio" name="language" id="zh" value="zh"><label for="zh">中文</label><br>
+<input type="radio" name="language" id="ja" value="ja"><label for="ja">日本語</label><br>
+<input type="radio" name="language" id="ko" value="ko"><label for="ko">한국어</label><br>
 </div>
 <br><br>
 

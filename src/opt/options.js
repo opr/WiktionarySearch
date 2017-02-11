@@ -1,7 +1,10 @@
+// document.title = chrome.i18n.getMessage("opts_title");
+// document.getElementById("title").innerHTML = chrome.i18n.getMessage("opts_title");
 document.getElementById("desc").innerHTML = chrome.i18n.getMessage("opts_desc");
 
 
 var btn = document.getElementsByName('language');
+var wikiurl = 'https://*.wiktionary.org';
 
 function save() {
     for (var i = 0; i < btn.length; i++) {
@@ -9,8 +12,10 @@ function save() {
             chrome.storage.sync.set({
                 "language": btn[i].value
             });
-            document.getElementById("url").innerHTML = '';
-            document.getElementById('url').innerHTML = '<br>'.repeat(i) + 'http://*.wiktionary.org'.replace('*', btn[i].value);
+            var a = document.querySelector("#url a");
+            a.innerHTML = '';
+            a.innerHTML = wikiurl.replace('*', btn[i].value);
+            a.href = wikiurl.replace('*', btn[i].value);
             break;
         }
     }
@@ -21,18 +26,16 @@ function save() {
     }, 5000);
 }
 
-
-
 function restore_options() {
     chrome.storage.sync.get({
         language: chrome.i18n.getMessage("iso"),
-        likesColor: true
     }, function(obj) {
         for (var i = 0; i < btn.length; i++) {
             if (btn[i].value == obj.language) {
                 btn[i].checked = true;
-
-								document.getElementById('url').innerHTML = '<br>'.repeat(i) + 'http://*.wiktionary.org'.replace('*', obj.language);
+                var a = document.querySelector("#url a");
+                a.innerHTML = wikiurl.replace('*', obj.language);
+                a.href = wikiurl.replace('*', obj.language);
             }
         }
 
