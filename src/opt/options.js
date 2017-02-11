@@ -33,6 +33,8 @@ function restore_options() {
         for (var i = 0; i < btn.length; i++) {
             if (btn[i].value == obj.language) {
                 btn[i].checked = true;
+                document.querySelector("[for='*']".replace('*', btn[i].value)).scrollIntoView();
+                window.scrollBy(0, -200);
                 var a = document.querySelector("#url a");
                 a.innerHTML = wikiurl.replace('*', obj.language);
                 a.href = wikiurl.replace('*', obj.language);
