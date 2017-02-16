@@ -4,24 +4,24 @@
   },
   "desc": {
     "message": "Slå upp ord i Wiktionary.",
-		"description": "Det här tillägget tillåter dig att utföra en snabbsökning på wiktionarys hemsida."
-	},
-	"context": {
-		"message": "Sök på Wiktionary efter ”%s”"
-	},
-	"popup": {
-		"message": "Sök på Wiktionary"
-	},
-	"opts_title": {
-		"message": "Inställningar"
-	},
-	"opts_desc": {
-		"message": "Ställ in det språk du föredrar"
-	},
-	"iso": {
-		"message": "sv"
-	},
-	"saved": {
-		"message": "Språkinställning sparad"
-	}
+    "description": "Det här tillägget tillåter dig att utföra en snabbsökning på wiktionarys hemsida."
+  },
+  "context": {
+    "message": "Sök på Wiktionary efter ”%s”"
+  },
+  "popup": {
+    "message": "Sök på Wiktionary"
+  },
+  "opts_title": {
+    "message": "Inställningar"
+  },
+  "opts_desc": {
+    "message": "Ställ in det språk du föredrar"
+  },
+  "iso": {
+    "message": "sv"
+  },
+  "saved": {
+    "message": "Språkinställning sparad"
+  }
 }
