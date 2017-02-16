@@ -6,7 +6,7 @@
 var lang;
 chrome.storage.sync.get("language", function(obj) {
     if (!obj.language) {
-        lang = chrome.i18n.getMessage("@@ui_locale");
+        lang = chrome.i18n.getMessage("iso");
     }
 });
 chrome.storage.onChanged.addListener(function(changes, namespace) {
