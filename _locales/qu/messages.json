@@ -1,0 +1,27 @@
+{
+  "name": {
+    "message": "Wiktionary Search"
+  },
+  "desc": {
+    "message": "Look up words in Wiktionary.",
+    "description": "This extension allows you to perform a quick search on the Wiktionary."
+  },
+  "context": {
+    "message": "Search Wiktionary for ”%s”"
+  },
+  "popup": {
+    "message": "Search Wiktionary"
+  },
+  "opts_title": {
+    "message": "Options"
+  },
+  "opts_desc": {
+    "message": "Set your preferred language"
+  },
+  "iso": {
+    "message": "qu"
+  },
+  "saved": {
+    "message": "Language setting saved"
+  }
+}
