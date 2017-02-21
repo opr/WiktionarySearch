@@ -6,22 +6,22 @@
     "message": "This extension allows you to perform a quick search on the Wiktionary.",
 		"description": "This extension allows you to perform a quick search on the Wiktionary."
   },
-	"context": {
-		"message": "Search Wiktionary for ”%s”"
-	},
-	"popup": {
-		"message": "Search Wiktionary"
-	},
-	"opts_title": {
-		"message": "Options"
-	},
-	"opts_desc": {
-		"message": "Set your preferred language"
-	},
-	"iso": {
-		"message": "en"
-	},
-	"saved": {
-		"message": "Language setting saved"
-	}
+  "context": {
+    "message": "Search Wiktionary for ”%s”"
+  },
+  "popup": {
+    "message": "Search Wiktionary"
+  },
+  "opts_title": {
+    "message": "Options"
+  },
+  "opts_desc": {
+    "message": "Set your preferred language"
+  },
+  "iso": {
+    "message": "en"
+  },
+  "saved": {
+    "message": "Language setting saved"
+  }
 }
