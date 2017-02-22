@@ -19,6 +19,7 @@
   "homepage": "https://github.com/opr/WiktionarySearch",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-bump": "^2.7.0"
+    "gulp-bump": "^2.7.0",
+    "gulp-zip": "^4.0.0"
   }
 }
